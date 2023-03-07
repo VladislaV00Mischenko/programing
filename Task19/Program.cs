@@ -15,7 +15,7 @@ bool checkNumber = CheckNumber(number);
  bool CheckNumber(int num)
  {
     int sum = 0;
-    for(int i = 0; 0 < num; i++)
+    while(num != 0)
     {
          sum = sum * 10;
          sum = sum + num % 10;

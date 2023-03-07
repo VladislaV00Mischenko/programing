@@ -6,14 +6,18 @@
 
 Console.Write("Введите положительное число: ");
 int number = Convert.ToInt32(Console.ReadLine());
-if(number > 0)
+if (number > 0)
 {
-for(int i = 1; i <= number; i++)
- {
-    Console.WriteLine($"{i}  {i * i * i}");
- }
+    CubeNum(number);
 }
 else
 {
     Console.WriteLine("Некорректный ввод");
+}
+void CubeNum(int num)
+{
+    for (int i = 1; i <= num; i++)
+    {
+        Console.WriteLine($"{i}  {i * i * i}");
+    }
 }
