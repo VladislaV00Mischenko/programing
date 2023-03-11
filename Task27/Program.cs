@@ -13,14 +13,12 @@ Console.WriteLine(sumDigit);
 
 int SumDigit(int num)
 {
-   int sum = 0;
    int digit = 0;
     while (num != 0)
 
     {   
-        digit = num % 10;
+        digit += num % 10;
         num = num / 10;
-        sum = sum + digit;
-    }
-    return sum;
+       }
+    return digit;
 }
