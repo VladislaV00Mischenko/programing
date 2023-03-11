@@ -27,3 +27,4 @@ void WriteArrai(int[] arr)
     }
     Console.Write("]");
 }
+
