@@ -9,7 +9,7 @@ Console.Write("Введите натуральное число: ");
 int numberB = Convert.ToInt32(Console.ReadLine());
 
 int degreeNumber = DegreeNumber(numberA, numberB);
-Console.WriteLine(degreeNumber);
+Console.WriteLine($"Число {numberA} в степени {numberB} = {degreeNumber}");
 
 
 int DegreeNumber(int numA, int numB)
