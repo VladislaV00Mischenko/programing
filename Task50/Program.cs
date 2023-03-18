@@ -18,7 +18,7 @@ Console.Write("Введите индекс столбца: ");
 int j = Convert.ToInt32(Console.ReadLine());
 
 
-if (i < 0 && j < 0)
+if (i >= 0 && j >= 0)
 {
     if (i < matrix.GetLength(0) && j < matrix.GetLength(1))
     {
