@@ -6,26 +6,37 @@
 // Результирующая матрица будет:
 // 18 20
 // 15 18
-int[,] matrix1 = CreateMatrixRndInt(2, 2, 0, 5);
-int[,] matrix2 = CreateMatrixRndInt(2, 2, 0, 5);
+int[,] matrix1 = CreateMatrixRndInt(2, 2, 1, 10);
+int[,] matrix2 = CreateMatrixRndInt(2, 2, 1, 10);
 PrintMatrix(matrix1);
 Console.WriteLine();
 PrintMatrix(matrix2);
-int[,] multiplaceMatrix = MultiplaceMatrix(matrix1, matrix2);
-PrintMatrix(multiplaceMatrix);
+ if(matrix1.GetLength(1) == matrix2.GetLength(0))
+ {
+  int[,] multiplaceMatrix = MultiplaceMatrix(matrix1, matrix2);
+  Console.WriteLine();
+  PrintMatrix(multiplaceMatrix);
+ }
+ else Console.WriteLine("Данные матрицы умножать нельзя");
+
+
+
+
+
 int[,] MultiplaceMatrix(int[,] matr1,int[,] matr2)
 {
+    
+
     int[,] newMatrix = new int[matr1.GetLength(0),matr2.GetLength(1)];
     
     for (int i = 0; i < matr1.GetLength(0); i++)
     {
-        int sum = 0;
         for (int j = 0; j < matr2.GetLength(1); j++)
         {
-            
-            for(int k = 0; k < matr1.GetLength(1); k++)
+            int sum = 0;
+            for(int k = 0; k < matr2.GetLength(0); k++)
             {
-                sum += matr1[j, k] * matr2[k, j];
+                sum += matr1[i, k] * matr2[k, j];
             }
             newMatrix[i, j] = sum;
         }
