@@ -4,8 +4,8 @@
 // 12 13 14 05
 // 11 16 15 06
 // 10 09 08 07
- 
- int[,] matrix = new int[4,4];
+
+int[,] matrix = new int[4,4];
 
 FillMatrixSpiral(matrix);
 PrintMatrix(matrix);
@@ -15,7 +15,7 @@ PrintMatrix(matrix);
  void FillMatrixSpiral(int[,] matr)
  {
     int num = 1;
-    for (int i = 0; i < matr.GetLength(0); i++)
+        for (int i = 0; i < matr.GetLength(0); i++)
     {
         matr[0,i] = num++;
     }
@@ -44,6 +44,8 @@ PrintMatrix(matrix);
         matr[matr.GetLength(0)-2, i] = num++;
     }
 }
+
+
 
 void PrintMatrix(int[,] matr)
 {
